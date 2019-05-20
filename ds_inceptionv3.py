@@ -60,57 +60,7 @@ validation_generator = test_datagen.flow_from_directory(
 from tensorflow.keras import layers
 from tensorflow.keras import Model, Input
 import tensorflow as tf
-# img_input = layers.Input(shape=(150,150,3))
-# #print(shape=(150,150,3))
-# x = tf.keras.layers.Conv2D(4, 3, activation='relu')(img_input)
-# x = tf.keras.layers.MaxPooling2D(2)(x)
-# x = tf.keras.layers.Conv2D(5, 3, activation='relu')(x)
-# x = tf.keras.layers.MaxPooling2D(2)(x)
-# x = tf.keras.layers.Conv2D(10, 3, activation='relu')(x)
-# x = tf.keras.layers.MaxPooling2D(2)(x)
-# x = tf.keras.layers.Flatten()(x)
-# x = tf.keras.layers.Dense(20, activation='relu')(x)
-# output = tf.keras.layers.Dense(3, activation='softmax')(x)
-# simple_model = tf.keras.Model(img_input, output)
-# # simple_model.compile(loss = 'categorical_crossentropy',
-# #               optimizer = tf.train.RMSPropOptimizer(0.001),
-# #               metrics = ['acc'])
-# simple_model.summary
 
-# # Our input feature map is 150x150x3: 150x150 for the image pixels, and 3 for
-# # the three color channels: R, G, and B
-# img_input = layers.Input(shape=(150, 150, 3))
-
-# # First convolution extracts 4 filters that are 3x3
-# # Convolution is followed by max-pooling layer with a 2x2 window
-# x = layers.Conv2D(4, 3, activation='relu')(img_input)
-# x = layers.MaxPooling2D(2)(x)
-
-# # Second convolution extracts 5 filters that are 3x3
-# # Convolution is followed by max-pooling layer with a 2x2 window
-# x = layers.Conv2D(5, 3, activation='relu')(x)
-# x = layers.MaxPooling2D(2)(x)
-
-# # Third convolution extracts 10 filters that are 3x3
-# # Convolution is followed by max-pooling layer with a 2x2 window
-# x = layers.Conv2D(10, 3, activation='relu')(x)
-# x = layers.MaxPooling2D(2)(x)
-
-# # Flatten feature map to a 1-dim tensor so we can add fully connected layers
-# x = layers.Flatten()(x)
-
-# # Create a fully connected layer with ReLU activation and 20 hidden units
-# x = layers.Dense(20, activation='relu')(x)
-
-# # Create output layer with a single node and sigmoid activation
-# output = layers.Dense(1, activation='sigmoid')(x)
-
-# # Create model:
-# # input = input feature map
-# # output = input feature map + stacked convolution/maxpooling layers + fully 
-# # connected layer + sigmoid output layer
-# model = Model(img_input, output)
-# model.summary()
 
 from tensorflow.keras.applications import vgg16, inception_v3, resnet50, mobilenet
 #input_tensor = Input(shape=(150, 150, 3))  # this assumes K.image_data_format() == 'channels_last'
